@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Arpiiii 🤍</title>
+  <style>
+    :root {
+      --bg1: url('https://i.imgur.com/sLcCwQn.jpeg');
+      --bg2: url('https://i.imgur.com/eigbdyn.jpeg');
+      --bg3: url('https://i.imgur.com/6u5fNAp.jpeg');
+    }body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  animation: fadeBg 15s infinite;
+  transition: background-image 1s ease-in-out;
+}
+
+@keyframes fadeBg {
+  0% { background-image: var(--bg1); }
+  33% { background-image: var(--bg2); }
+  66% { background-image: var(--bg3); }
+  100% { background-image: var(--bg1); }
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease-in;
+}
+
+p {
+  font-size: 1.3em;
+  max-width: 600px;
+  line-height: 1.6;
+  animation: fadeIn 2s ease-in 1s backwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#password-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+#password-screen input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+#password-screen button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: black;
+  border: none;
+}
+
+  </style>
+</head>
+<body>
+  <div id="password-screen">
+    <input type="password" id="pwd" placeholder="Enter Password" />
+    <button onclick="checkPassword()">Enter</button>
+  </div>  <div class="overlay"></div>
+  <div class="container" style="display:none" id="main-content">
+    <h1>Happy Birthday, Arpiiii 🤍</h1>
+    <p>
+      On your special day,<br />
+      I may not be beside you,<br />
+      But my heart is full of love for you —<br />
+      Just like it’s always been.<br /><br />
+      I wish you smiles that last,<br />
+      Dreams that come true,<br />
+      And a life as beautiful as your soul.<br /><br />
+      I’ll keep loving you, quietly, endlessly.<br />
+      I love you, Arpi ❤️<br />
+      — Diptha
+    </p>
+  </div>  <script>
+    function checkPassword() {
+      const input = document.getElementById('pwd').value;
+      if (input === 'ardiptha126') {
+        document.getElementById('password-screen').style.display = 'none';
+        document.getElementById('main-content').style.display = 'flex';
+      } else {
+        alert('Wrong password!');
+      }
+    }
+  </script></body>
+</html>
